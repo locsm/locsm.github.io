@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="podanie.css">
+		<script type="text/javascript" src="podanie.js"></script>
+		<script type="text/javascript" src="mail.js"></script>
+	</head>
+	<body onload="onBodyLoaded();">
+		<div class="div-naglowek">
+			<div>
+				<img src="aszwoj.png" />
+				<img src="locsm.png" />
+				<img src="uwb.png" />
+			</div>
+			<div style="font-size: 28px;">
+				<p>PODANIE O PRZYJĘCIE DO SZKOŁY</p>
+			</div>
+			<div>
+				<p style="font-size: 28px;">Liceum Ogólnokształcące Centrum Szkół Mundurowych w&nbsp;Białymstoku</p>
+				<p>pod patronatem Uniwersytetu w&nbsp;Białymstoku i&nbsp;Akademii Sztuki Wojennej</p>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="spacer"></div>
+
+		<div class="div-klasa">
+			<div style="text-align: center; font-weight: bold;">
+				<p>Jestem uczniem 
+					<select id="form-jestemuczniem" required>
+						<option hidden disabled selected value></option>
+						<option value="gimnazjum">gimnazjum</option>
+						<option value="szkoły podstawowej">szkoły podstawowej</option>
+					</select>
+				</p>
+			</div>
+			<div style="text-align: center; font-weight: bold;">
+				<p>Proszę o przyjęcie do klasy 
+					<select id="form-doklasy" required>
+						<option selected value="pierwszej">pierwszej</option>
+						<option value="drugiej">drugiej</option>
+						<option value="trzeciej">trzeciej</option>
+						<option value="czwartej">czwartej</option>
+					</select>
+				</p>
+				<p>Liceum Ogólnokształcącego Centrum Szkół Mundurowych w&nbsp;Białymstoku w&nbsp;roku szkolnym 2019/2020</p>
+			</div>
+
+			<div class="spacer"></div>
+
+			<div>
+				<h2>Wybieram klasę o profilu:</h2>
+				<p id="klasy-prosimywypelnic" style="text-align: center; font-size: 14px;">(Prosimy wypełnić kolejność wyboru cyferkami 1, 2, 3 w polach przy profilach klas)</p>
+				<div>
+					<p class="klasa">
+						<select id="form-klasa_wojskowa">
+							<option selected value></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						<span>Klasa wojskowa (komandosów)</span>
+					</p>
+					<p class="opis-klasy">zajęcia specjalistyczne - edukacja wojskowa, szkolenie komandoskie, sztuki walki</p>
+					<p class="opis-klasy">rozszerzenie - język angielski, język polski, geografia</p>
+				</div>
+				<div>
+					<p class="klasa">
+						<select id="form-klasa_granicznej">
+							<option selected value></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						<span>Klasa straży granicznej</span>
+					</p>
+					<p class="opis-klasy">zajęcia specjalistyczne - ochrona granicy, sztuki walki i samoobrony</p>
+					<p class="opis-klasy">rozszerzenie - język angielski, język polski, historia</p>
+				</div>
+				<div>
+					<p class="klasa">
+						<select id="form-klasa_policyjna">
+							<option selected value></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						<span>Klasa policyjno-kryminologiczna</span>
+					</p>
+					<p class="opis-klasy">zajęcia specjalistyczne - edukacja policyjna, kryminologia, kryminologia prawna, sztuki walki</p>
+					<p class="opis-klasy">rozszerzenie - język angielski, język polski, historia</p>
+				</div>
+				<div>
+					<p class="klasa">
+						<select id="form-klasa_pozarnej">
+							<option selected value></option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						<span>Klasa straży pożarnej</span>
+					</p>
+					<p class="opis-klasy">zajęcia specjalistyczne - edukacja pożarnicza</p>
+					<p class="opis-klasy">rozszerzenie - język angielski, chemia</p>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class="div-arkuszosobowy">
+			<h2>Arkusz osobowy</h2>
+			<div>
+				<p>Imię/imiona</p>
+				<p><input id="form-imie" type="text" /></p>
+			</div>
+			<div>
+				<p>Nazwisko</p>
+				<p><input id="form-nazwisko" type="text" /></p>
+			</div>
+			<div>
+				<p>Pesel</p>
+				<p><input id="form-pesel" type="text" maxlength="11" /></p>
+			</div>
+			<div>
+				<p>Data i miejsce urodzenia</p>
+				<p>
+					<label for="form-dataurodzenia_dzien">Dzień<br />
+						<input id="form-dataurodzenia_dzien" type="text" maxlength="2" style="width: 60px;" />
+					</label>
+					<label for="form-dataurodzenia_miesiac">Miesiąc<br />
+						<select id="form-dataurodzenia_miesiac">
+							<option hidden disabled selected value></option>
+							<option value="stycznia">styczeń</option>
+							<option value="lutego">luty</option>
+							<option value="marca">marzec</option>
+							<option value="kwietnia">kwiecień</option>
+							<option value="maja">maj</option>
+							<option value="czerwca">czerwiec</option>
+							<option value="lipca">lipiec</option>
+							<option value="sierpnia">sierpień</option>
+							<option value="września">wrzesień</option>
+							<option value="października">październik</option>
+							<option value="listopada">listopad</option>
+							<option value="grudnia">grudzień</option>
+						</select>
+					</label>
+					<label for="form-dataurodzenia_rok">Rok<br />
+						<input id="form-dataurodzenia_rok" type="text" maxlength="4" style="width: 60px;" />
+					</label>
+					<label for="form-miejsceurodzenia">Miejscowość<br />
+						<input id="form-miejsceurodzenia" type="text" />
+					</label>
+				</p>
+			</div>
+			<div>
+				<p>Imię i nazwisko matki</p>
+				<p><input id="form-matka_imieinazwisko" type="text" /></p>
+			</div>
+			<div>
+				<p>Imię i nazwisko ojca</p>
+				<p><input id="form-ojciec_imieinazwisko" type="text" /></p>
+			</div>
+			<div>
+				<p>Adres matki</p>
+				<p><input id="form-matka_adres" type="text" /></p>
+			</div>
+			<div>
+				<p>Adres ojca</p>
+				<p><input id="form-ojciec_adres" type="text" /></p>
+			</div>
+			<div>
+				<p>Telefon matki</p>
+				<p><input id="form-matka_telefon" type="text" maxlength="9" /></p>
+			</div>
+			<div>
+				<p>Telefon ojca</p>
+				<p><input id="form-ojciec_telefon" type="text" maxlength="9" /></p>
+			</div>
+			<div>
+				<p>Adres e-mail matki</p>
+				<p><input id="form-matka_email" type="text" /></p>
+			</div>
+			<div>
+				<p>Adres e-mail ojca</p>
+				<p><input id="form-ojciec_email" type="text" /></p>
+			</div>
+
+			<div>
+				<p>Adres zamieszkania kandydata</p>
+				<p>
+					<label for="form-adres">Ulica, numer domu, numer lokalu<br />
+						<input id="form-adres" type="text" />
+					</label>
+					<label for="form-adres_miejscowosc">Miejscowość<br />
+						<input id="form-adres_miejscowosc" type="text" />
+					</label>
+					<label for="form-adres_kod">Kod pocztowy<br />
+						<input id="form-adres_kod" type="text" maxlength="5" style="width: 100px;" />
+					</label>
+				</p>
+			</div>
+			<div>
+				<p>Adres zameldowania kandydata - wypełnić, jeśli inny niż zamieszkania</p>
+				<p>
+					<label for="form-altadres">Ulica, numer domu, numer lokalu<br />
+						<input id="form-altadres" type="text" />
+					</label>
+					<label for="form-altadres_miejscowosc">Miejscowość<br />
+						<input id="form-altadres_miejscowosc" type="text" />
+					</label>
+					<label for="form-altadres_kod">Kod pocztowy<br />
+						<input id="form-altadres_kod" type="text" maxlength="5" style="width: 100px;" />
+					</label>
+				</p>
+			</div>
+			<div>
+				<p>Telefon</p>
+				<p><input id="form-telefon" type="text" maxlength="9" /></p>
+			</div>
+			<div>
+				<p>Adres e-mail</p>
+				<p><input id="form-email" type="text" /></p>
+			</div>
+			<div>
+				<p>Nazwa ukończonej szkoły</p>
+				<p><input id="form-szkola" type="text" /></p>
+			</div>
+			<div>
+				<p>Rok ukończenia</p>
+				<p><input id="form-rokukonczenia" type="text" maxlength="4" /></p>
+			</div>
+		</div>
+
+		<div class="spacer"></div>
+		<hr />
+
+		<div class="div-dodatkoweinformacje">
+			<h2>Dodatkowe informacje o kandydacie</h2>
+			<div>
+				<p>Trenowane sporty</p>
+				<p><textarea id="extraform-sporty" rows="2" cols="50"></textarea></p>
+			</div>
+			<div>
+				<p>Osiągnięcia w konkursach i olimpiadach</p>
+				<p><textarea id="extraform-osiagniecia" rows="2" cols="50"></textarea></p>
+			</div>
+			<div>
+				<p>Działalność społeczna (np. samorząd szkolny)</p>
+				<p><textarea id="extraform-dzialalnosc" rows="2" cols="50"></textarea></p>
+			</div>
+			<div>
+				<p>Działalność w wolontariatach</p>
+				<p><textarea id="extraform-wolontariaty" rows="2" cols="50"></textarea></p>
+			</div>
+			<div>
+				<p>Wysokie wyniki w nauce (jakie przedmioty)</p>
+				<p><textarea id="extraform-wyniki" rows="2" cols="50"></textarea></p>
+			</div>
+			<div>
+				<p>Ocena półroczna z zachowania z ostatniej klasy</p>
+				<p><input id="extraform-zachowanie" type="text" /></p>
+			</div>
+			<div>
+				<p>Średnia ocen na półrocze z ostatniej klasy</p>
+				<p><input id="extraform-srednia" type="text" /></p>
+			</div>
+		</div>
+
+		<div class="div-stopka">
+
+		</div>
+
+		<div class="spacer"></div>
+
+		<div class="div-wyslij">
+			<p id="err-missingfields" style="display: none; color: brown;">Przed wysłaniem podania wypełnij brakujące pola.</p>
+			<p id="err-invalidclasschoice" style="display: none; color: brown;">Popraw wybór klas!</p>
+			<p id="mailsent" style="display: none; color: #1f540f;">Podanie zostało wysłane.</p>
+			<p id="err-cantsend" style="display: none; color: brown;">Nie udało się wysłać podania.</p>
+			<p><button id="button-wyslij" onclick="if(validateForm()) sendMail();">Złóż podanie</button></p>
+		</div>
+
+		<div class="spacer"></div>
+	</body>
+</html>
