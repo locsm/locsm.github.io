@@ -111,20 +111,21 @@
 
 		<div class="div-arkuszosobowy">
 			<h2>Arkusz osobowy</h2>
+			<p style="text-align: center; font-size: 14px;">(Obowiązkowe pola oznaczono podkreśleniem)</p>
 			<div>
-				<p>Imię/imiona</p>
+				<p class="required">Imię/imiona</p>
 				<p><input id="form-imie" type="text" /></p>
 			</div>
 			<div>
-				<p>Nazwisko</p>
+				<p class="required">Nazwisko</p>
 				<p><input id="form-nazwisko" type="text" /></p>
 			</div>
 			<div>
-				<p>Pesel</p>
+				<p class="required">Pesel</p>
 				<p><input id="form-pesel" type="text" maxlength="11" /></p>
 			</div>
 			<div>
-				<p>Data i miejsce urodzenia</p>
+				<p class="required">Data i miejsce urodzenia</p>
 				<p>
 					<label for="form-dataurodzenia_dzien">Dzień<br />
 						<input id="form-dataurodzenia_dzien" type="text" maxlength="2" style="width: 60px;" />
@@ -154,41 +155,54 @@
 					</label>
 				</p>
 			</div>
-			<div>
-				<p>Imię i nazwisko matki</p>
-				<p><input id="form-matka_imieinazwisko" type="text" /></p>
-			</div>
-			<div>
-				<p>Imię i nazwisko ojca</p>
-				<p><input id="form-ojciec_imieinazwisko" type="text" /></p>
-			</div>
-			<div>
-				<p>Adres matki</p>
-				<p><input id="form-matka_adres" type="text" /></p>
-			</div>
-			<div>
-				<p>Adres ojca</p>
-				<p><input id="form-ojciec_adres" type="text" /></p>
-			</div>
-			<div>
-				<p>Telefon matki</p>
-				<p><input id="form-matka_telefon" type="text" maxlength="9" /></p>
-			</div>
-			<div>
-				<p>Telefon ojca</p>
-				<p><input id="form-ojciec_telefon" type="text" maxlength="9" /></p>
-			</div>
-			<div>
-				<p>Adres e-mail matki</p>
-				<p><input id="form-matka_email" type="text" /></p>
-			</div>
-			<div>
-				<p>Adres e-mail ojca</p>
-				<p><input id="form-ojciec_email" type="text" /></p>
+
+			<div class="spacer"></div>
+
+			<div class="row">
+				<div class="column">
+					<div>
+						<p>Imię i nazwisko matki</p>
+						<p><input id="form-matka_imieinazwisko" type="text" /></p>
+					</div>
+					<div>
+						<p>Adres matki</p>
+						<p><input id="form-matka_adres" type="text" /></p>
+					</div>
+					<div>
+						<p>Telefon matki</p>
+						<p><input id="form-matka_telefon" type="text" maxlength="9" /></p>
+					</div>
+					<div>
+						<p>Adres e-mail matki</p>
+						<p style="font-size: 12px;">Potrzebny do otrzymania dostępu do dziennika elektronicznego</p>
+						<p><input id="form-matka_email" type="text" /></p>
+					</div>
+				</div>
+				<div class="column">
+					<div>
+						<p>Imię i nazwisko ojca</p>
+						<p><input id="form-ojciec_imieinazwisko" type="text" /></p>
+					</div>
+					<div>
+						<p>Adres ojca</p>
+						<p><input id="form-ojciec_adres" type="text" /></p>
+					</div>
+					<div>
+						<p>Telefon ojca</p>
+						<p><input id="form-ojciec_telefon" type="text" maxlength="9" /></p>
+					</div>
+					<div>
+						<p>Adres e-mail ojca</p>
+						<p style="font-size: 12px;">Potrzebny do otrzymania dostępu do dziennika elektronicznego</p>						
+						<p><input id="form-ojciec_email" type="text" /></p>
+					</div>
+				</div>
 			</div>
 
+			<div class="spacer"></div>
+
 			<div>
-				<p>Adres zamieszkania kandydata</p>
+				<p class="required">Adres zamieszkania kandydata</p>
 				<p>
 					<label for="form-adres">Ulica, numer domu, numer lokalu<br />
 						<input id="form-adres" type="text" />
@@ -216,7 +230,7 @@
 				</p>
 			</div>
 			<div>
-				<p>Telefon</p>
+				<p class="required">Telefon</p>
 				<p><input id="form-telefon" type="text" maxlength="9" /></p>
 			</div>
 			<div>

@@ -119,3 +119,16 @@ table.pesel td input[type=text] {
 	padding-right: 50px;
 	border-radius: 4px;
 }
+
+div.row {
+	display: flex;
+}
+
+div.column {
+	flex: 50%;
+}
+
+p.required {
+	text-decoration: underline;
+	color: #111;
+}
